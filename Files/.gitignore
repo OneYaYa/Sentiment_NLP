@@ -1,0 +1,4 @@
+venv/
+ash_data/
+.cursor/
+__pycache__/

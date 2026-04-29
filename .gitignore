@@ -1,6 +1,5 @@
 # Project-specific exclusions
 model/
-Files/
 .venv/
 venv/
 env/

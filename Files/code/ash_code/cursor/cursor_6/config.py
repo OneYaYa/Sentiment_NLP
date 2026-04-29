@@ -1,0 +1,20 @@
+"""Meta-labeling: SMA primary signal gated by walk-forward logistic regression."""
+
+from __future__ import annotations
+
+DEFAULT_TICKER = "USO"
+
+DEFAULT_FAST_WINDOW = 20
+DEFAULT_SLOW_WINDOW = 50
+
+DEFAULT_TRAIN_WINDOW = 252
+DEFAULT_N_LAGS = 5
+DEFAULT_PROB_THRESHOLD = 0.5
+
+DEFAULT_START_DATE: str | None = "2015-01-01"
+DEFAULT_END_DATE: str | None = None
+
+INITIAL_CASH = 100_000.0
+COMMISSION_RATE = 0.0005
+RISK_FREE_ANNUAL = 0.0
+TRADING_DAYS_PER_YEAR = 252

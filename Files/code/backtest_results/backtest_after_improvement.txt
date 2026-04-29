@@ -1,0 +1,69 @@
+============================================================
+Walk-Forward Backtest with Daily Sentiment
+============================================================
+Sentiment: D:\Users\17738\Desktop\Spring 2026\Industrial Project Practicum\Campbell-B\code\final_analysis\daily_sentiment_scores_2017_2024.csv
+Parameter grid: 192 combinations
+Score = Sharpe - |MaxDD| - 0.4*turnover - param_penalty; top-10 then lowest turnover
+
+
+--- WTI ---
+Market + sentiment: 5307 rows, 2005-01-03 00:00:00 to 2026-02-06 00:00:00
+
+  Fold: Train (2017, 2018) | Validate (2019, 2020) | Test 2021
+    Best params: entry_z=0.5, exit_z=0.0, w=(0.1,0.3,0.6), target_vol=0.005, w_max=1.5, z_window=120
+    Valid Score: -0.7836 | Valid Sharpe: -0.5462, MaxDD: -0.2118
+    Test  Sharpe: -1.9828, MaxDD: -0.1528, AnnRet: -0.1528
+
+  Fold: Train (2018, 2019) | Validate (2020, 2021) | Test 2022
+    Best params: entry_z=0.7, exit_z=0.0, w=(0.5,0.3,0.2), target_vol=0.005, w_max=1.5, z_window=120
+    Valid Score: -1.0255 | Valid Sharpe: -0.6991, MaxDD: -0.2831
+    Test  Sharpe: -0.2226, MaxDD: -0.0797, AnnRet: -0.0202
+
+  Fold: Train (2019, 2020) | Validate (2021, 2022) | Test 2023
+    Best params: entry_z=0.7, exit_z=0.0, w=(0.5,0.3,0.2), target_vol=0.005, w_max=1.5, z_window=120
+    Valid Score: -0.7724 | Valid Sharpe: -0.5753, MaxDD: -0.1599
+    Test  Sharpe: -1.0125, MaxDD: -0.0500, AnnRet: -0.0593
+
+  Fold: Train (2020, 2021) | Validate (2022, 2023) | Test 2024
+    Best params: entry_z=0.5, exit_z=0.1, w=(0.5,0.3,0.2), target_vol=0.005, w_max=1.5, z_window=60
+    Valid Score: -0.4392 | Valid Sharpe: -0.2907, MaxDD: -0.0884
+    Test  Sharpe: 0.7030, MaxDD: -0.0370, AnnRet: 0.0444
+
+--- Brent ---
+Market + sentiment: 4610 rows, 2007-07-30 00:00:00 to 2026-02-06 00:00:00
+
+  Fold: Train (2017, 2018) | Validate (2019, 2020) | Test 2021
+    Best params: entry_z=0.5, exit_z=0.1, w=(0.1,0.3,0.6), target_vol=0.005, w_max=1.5, z_window=120
+    Valid Score: 0.4676 | Valid Sharpe: 0.5874, MaxDD: -0.0896
+    Test  Sharpe: -1.7558, MaxDD: -0.1417, AnnRet: -0.1417
+
+  Fold: Train (2018, 2019) | Validate (2020, 2021) | Test 2022
+    Best params: entry_z=0.5, exit_z=0.1, w=(0.5,0.3,0.2), target_vol=0.005, w_max=1.5, z_window=120
+    Valid Score: 0.0571 | Valid Sharpe: 0.2088, MaxDD: -0.1073
+    Test  Sharpe: -0.4465, MaxDD: -0.0781, AnnRet: -0.0388
+
+  Fold: Train (2019, 2020) | Validate (2021, 2022) | Test 2023
+    Best params: entry_z=0.5, exit_z=0.1, w=(0.2,0.3,0.5), target_vol=0.005, w_max=1.5, z_window=120
+    Valid Score: -0.8036 | Valid Sharpe: -0.6341, MaxDD: -0.1409
+    Test  Sharpe: -1.1746, MaxDD: -0.0755, AnnRet: -0.0842
+
+  Fold: Train (2020, 2021) | Validate (2022, 2023) | Test 2024
+    Best params: entry_z=0.5, exit_z=0.1, w=(0.5,0.3,0.2), target_vol=0.005, w_max=1.5, z_window=60
+    Valid Score: -0.3432 | Valid Sharpe: -0.2027, MaxDD: -0.0772
+    Test  Sharpe: 1.0302, MaxDD: -0.0393, AnnRet: 0.0672
+
+============================================================
+Test Performance Summary (all folds)
+============================================================
+WTI | Train(2017, 2018) Val(2019, 2020) Test2021 | Sharpe: -1.9828 | MaxDD: -0.1528 | AnnRet: -0.1528
+WTI | Train(2018, 2019) Val(2020, 2021) Test2022 | Sharpe: -0.2226 | MaxDD: -0.0797 | AnnRet: -0.0202
+WTI | Train(2019, 2020) Val(2021, 2022) Test2023 | Sharpe: -1.0125 | MaxDD: -0.0500 | AnnRet: -0.0593
+WTI | Train(2020, 2021) Val(2022, 2023) Test2024 | Sharpe: 0.7030 | MaxDD: -0.0370 | AnnRet: 0.0444  
+Brent | Train(2017, 2018) Val(2019, 2020) Test2021 | Sharpe: -1.7558 | MaxDD: -0.1417 | AnnRet: -0.1417
+Brent | Train(2018, 2019) Val(2020, 2021) Test2022 | Sharpe: -0.4465 | MaxDD: -0.0781 | AnnRet: -0.0388
+Brent | Train(2019, 2020) Val(2021, 2022) Test2023 | Sharpe: -1.1746 | MaxDD: -0.0755 | AnnRet: -0.0842
+Brent | Train(2020, 2021) Val(2022, 2023) Test2024 | Sharpe: 1.0302 | MaxDD: -0.0393 | AnnRet: 0.0672
+
+Saved test-set backtest: D:\Users\17738\Desktop\Spring 2026\Industrial Project Practicum\Campbell-B\code\data\wti_strategy_backtest.csv (1005 rows)
+
+Saved test-set backtest: D:\Users\17738\Desktop\Spring 2026\Industrial Project Practicum\Campbell-B\code\data\brent_strategy_backtest.csv (1006 rows)

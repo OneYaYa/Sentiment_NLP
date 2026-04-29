@@ -1,0 +1,41 @@
+# Project-specific exclusions
+model/
+Files/
+.venv/
+venv/
+env/
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+build/
+dist/
+*.egg-info/
+.pytest_cache/
+.mypy_cache/
+.ipynb_checkpoints/
+
+# IDE
+.vscode/
+.idea/
+*.swp
+
+# Logs / temp
+*.log
+*.tmp
+
+# Large data / model artifacts (defense in depth)
+*.bin
+*.h5
+*.msgpack
+*.pt
+*.pth
+*.ckpt
+*.safetensors
